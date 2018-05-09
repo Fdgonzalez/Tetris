@@ -13,7 +13,7 @@ int main() {
         printf("unable to initialize SDL: %s\n", SDL_GetError());
         return 1;
     }
-    screen = SDL_CreateWindow("Tetris PE 0.1",
+    screen = SDL_CreateWindow("SDLTRIS!",
                               SDL_WINDOWPOS_UNDEFINED,
                               SDL_WINDOWPOS_UNDEFINED,
                               WIDTH, HEIGHT,
@@ -38,7 +38,7 @@ int main() {
     createGrid();
     //Init text
     TTF_Init();
-    scoreFont = TTF_OpenFont("/usr/share/fonts/dejavu/DejaVuSans.ttf",30);
+    scoreFont = TTF_OpenFont(FONT,30);
     if(!scoreFont){
         fprintf(stderr,"FONT NOT FOUND\n");
         return 1;
@@ -77,28 +77,28 @@ int main() {
         //control
         SDL_PumpEvents();
         keystate = SDL_GetKeyboardState(NULL);
-        if(start > timeA + 150 && keystate[SDL_SCANCODE_A]){
+        if(keystate[SDL_SCANCODE_A] && start > timeA + 150){
             moveLeft();
             timeA = start;
         }
-        if(start > timeD + 150 && keystate[SDL_SCANCODE_D]){
+        if(keystate[SDL_SCANCODE_D] && start > timeD + 150){
             moveRight();
             timeD = start;
         }
-        if(start > timeW + 150 && keystate[SDL_SCANCODE_W]){
+        if(keystate[SDL_SCANCODE_W] && start > timeW + 150){
             rotate();
             timeW = start;
         }
-        if(start > timeSPACE + 150 && keystate[SDL_SCANCODE_SPACE]){
+        if(keystate[SDL_SCANCODE_SPACE] && start > timeSPACE + 150){
             dropCurrent();
             playDrop();
             timeSPACE = start;
         }
-        if(start > timeS + 100 && keystate[SDL_SCANCODE_S]){
+        if(keystate[SDL_SCANCODE_S] && start > timeS + 100){
             currentGravity();
             timeS = start;
         }
-        if(start > timeSHIFT + 150 && keystate[SDL_SCANCODE_LSHIFT]){
+        if(keystate[SDL_SCANCODE_LSHIFT] && start > timeSHIFT + 150){
             swapCurrent();
             timeSHIFT = start;
 

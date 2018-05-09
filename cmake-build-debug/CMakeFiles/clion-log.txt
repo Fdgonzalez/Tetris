@@ -1,0 +1,5 @@
+/home/facundo/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=/usr/bin/gcc -G "CodeBlocks - Unix Makefiles" /home/facundo/CLionProjects/Tetris
+-- Could NOT find SDL2_MIXER (missing: SDL2_MIXER_LIBRARIES SDL2_MIXER_INCLUDE_DIRS) 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/facundo/CLionProjects/Tetris/cmake-build-debug
