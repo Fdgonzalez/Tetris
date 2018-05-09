@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/Tetris.dir/src/main.c.o CMakeFiles/Tetris.dir/src/block.c.o CMakeFiles/Tetris.dir/src/grid.c.o CMakeFiles/Tetris.dir/src/tetromino.c.o CMakeFiles/Tetris.dir/src/score.c.o CMakeFiles/Tetris.dir/src/sound.c.o  -o Tetris /usr/lib64/libSDL2.so -lpthread /usr/lib64/libSDL2_image.so /usr/lib64/libSDL2_ttf.so /usr/lib64/libSDL2_mixer.so 
